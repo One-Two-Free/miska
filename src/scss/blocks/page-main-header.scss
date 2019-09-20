@@ -1,0 +1,114 @@
+.page-main-header {
+  //min-height: 490px;
+  //margin-bottom: 30px;
+  padding-top: 1px ;
+
+  background-color: #f9f9f9;
+  background-image: url('../img/hero-mobile.jpg');
+  background-position: center -17px;
+  background-repeat: no-repeat;
+}
+
+.page-main-header__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.page-main-header__title {
+  display: block;
+  margin-top: 70px;
+  padding: 0 30px;
+
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.page-main-header__goods {
+  @include ul-reset;
+  margin-top: 120px;
+}
+
+
+
+
+@media (min-width: $tablet-width) {
+  .page-main-header {
+    position: relative;
+    min-height: 752px;
+
+    margin-bottom: 10px;
+
+    background-image: url('../img/hero-desktop.jpg');
+    background-position: center top;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 22px;
+      background-image: url('../img/zigzag-fill-tablet.png');
+      background-position: center 0;
+    }
+  }
+
+  .page-main-header__wrapper {
+    width: 668px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .page-main-header__title {
+    margin-top: 152px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .page-main-header__goods {
+    display: flex;
+    margin-top: 377px;
+  }
+
+  .goods-nav__item {
+    width: 50%;
+  }
+}
+
+
+
+
+
+@media (min-width: $desktop-width) {
+  .page-main-header {
+    min-height: 765px;
+
+    background-image: url('../img/hero-desktop.jpg');
+
+    &::after {
+      height: 34px;
+
+      background-image: url('../img/zigzag-fill-desktop2.png');
+      background-position: center 0;
+    }
+  }
+
+  .page-main-header__wrapper {
+    width: 1050px;
+    padding: 0 50px;
+  }
+
+  .page-main-header__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .page-main-header__goods {
+    margin-top: 360px;
+  }
+}
+
+
+

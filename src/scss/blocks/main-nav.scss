@@ -1,0 +1,159 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__site-list {
+  @include ul-reset;
+}
+
+.main-nav__button {
+  position: absolute;
+  right: 25px;
+  top: -58px;
+  z-index: 2;
+
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  font-size: 0;
+  line-height: 0;
+
+  background: none;
+  border: none;
+}
+
+.main-nav--closed .main-nav__button::before {
+  content: '';
+
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  width: 20px;
+  height: 2px;
+
+  background-color: $black;
+  box-shadow: 0 1px 0 0 $grey-light, 0 6px 0 0 $black, 0 8px 0 0 $grey-light, 0 12px 0 0 $black;
+}
+
+.main-nav--opened .main-nav__button::after,
+.main-nav--opened .main-nav__button::before {
+  content: '';
+
+  position: absolute;
+  top: 13px;
+  left: 2px;
+
+  width: 27px;
+  height: 3px;
+
+  background-color: $black;
+}
+
+.main-nav--opened .main-nav__button::after {
+  transform: rotate(45deg);
+}
+
+.main-nav--opened .main-nav__button::before {
+  transform: rotate(-45deg);
+}
+
+.main-nav__actual-list {
+  @include ul-reset;
+}
+
+.main-nav__note {
+  display: none;
+}
+
+@media (max-width: $mobile-max-width) {
+  .main-nav--closed .main-nav__site-list,
+  .main-nav--closed .main-nav__user-list {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    position: static;
+    margin-left: auto;
+  }
+
+  .main-nav__button {
+    display: none;
+  }
+
+  .main-nav__site-list {
+    position: absolute;
+    top: 93px;
+    left: 50px;
+    z-index: 20;
+  }
+
+  .main-nav__user-list {
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  .main-nav__note {
+    position: absolute;
+    right: 50px;
+    top: 93px;
+    z-index: 10;
+
+    display: block;
+
+    font-size: 15px;
+    line-height: 24px;
+
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    margin: 0 50px;
+    border-bottom: 1px solid $grey-light;
+  }
+
+  .main-nav__site-list {
+    position: static;
+    margin: 0;
+  }
+
+  .main-nav__user-list {
+
+  }
+
+  .main-nav__actual-list {
+    position: absolute;
+    bottom: -50px;
+
+    z-index: 30;
+  }
+
+  .main-nav__note {
+    right: 100px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

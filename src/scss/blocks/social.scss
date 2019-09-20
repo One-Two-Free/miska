@@ -1,0 +1,30 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 145px;
+}
+
+.social__link:hover,
+.social__link:focus {
+  opacity: 0.6;
+}
+
+.social__link:active {
+  opacity: 0.1;
+}
+
+
+
+
+
+
+
+
+@media (min-width: $tablet-width) {
+  .social {
+    display: inline-flex;
+  }
+
+
+}

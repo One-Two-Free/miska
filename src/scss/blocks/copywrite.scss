@@ -1,0 +1,48 @@
+.copywrite {
+  border-top: 1px solid $grey-e5;
+  padding: 22px 0;
+}
+
+.copywrite__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 18px;
+  color: $black;
+  font-weight: bold;
+  text-decoration: none;
+
+  vertical-align: middle;
+
+  &:hover, &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.copywrite__img {
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+@media (min-width: $tablet-width) {
+  .copywrite {
+    display: inline-block;
+    padding: 0;
+    border: none;
+  }
+
+  .copywrite__img {
+    margin-left: 28px;
+  }
+}

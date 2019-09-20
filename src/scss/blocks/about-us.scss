@@ -1,0 +1,165 @@
+.about-us {
+  width: $mobile-width;
+
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.about-us__wrapper {
+  padding: 0 30px;
+}
+
+.about-us__title {
+  margin: 0;
+  margin-bottom: 33px;
+  padding: 0;
+
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.about-us__list {
+  @include ul-reset;
+}
+
+.about-us__item {
+  position: relative;
+  padding-top: 53px;
+  padding-bottom: 30px;
+
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &--1::before {
+    left: 10px;
+    width: 32px;
+    height: 37px;
+    background-image: url('../img/icon-1.png');
+  }
+
+  &--2::before {
+    width: 47px;
+    height: 27px;
+    background-image: url('../img/icon-3.png');
+  }
+
+  &--3::before {
+    left: 6px;
+    top: 3px;
+    width: 34px;
+    height: 27px;
+    background-image: url('../img/icon-5.png');
+  }
+
+  &--4::before {
+    left: 2px;
+    width: 35px;
+    height: 34px;
+    background-image: url('../img/icon-2.png');
+  }
+
+  &--5::before {
+    left: -7px;
+    width: 55px;
+    height: 23px;
+    background-image: url('../img/icon-4.png');
+  }
+
+  &--6::before {
+    //left: 10px;
+    top: 2px;
+    width: 33px;
+    height: 32px;
+    background-image: url('../img/icon-6.png');
+  }
+}
+
+
+
+
+
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    width: $tablet-width;
+  }
+
+  .about-us__wrapper {
+    padding: 50px;
+    padding-bottom: 0;
+  }
+
+  .about-us__title {
+    margin-bottom: 50px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .about-us__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    height: 465px;
+  }
+
+  .about-us__item {
+    width: 50%;
+    padding-bottom: 57px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+
+
+
+
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    width: $desktop-width;
+  }
+
+  .about-us__wrapper {
+    padding: 0 100px;
+  }
+
+  .about-us__title {
+    margin-left: 175px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .about-us__list {
+    margin: 0 auto;
+    width: 700px;
+  }
+
+  .about-us__item {
+
+  }
+}
+
+
+
+
+
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    margin-bottom: 33px;
+  }
+}
+
+
+
